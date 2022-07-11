@@ -9,7 +9,6 @@
  * struct structprint - structure containing
  * @q: the location and method to translate data to characters.
  * @u: print function for specific type.
- *
  * Return: int
  */
 typedef struct structprint

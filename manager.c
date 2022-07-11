@@ -13,7 +13,7 @@ int (*manager(const char *format))(va_list)
 {
     int i;
 
-    structype selector[] = {    
+    structype selector[] = {
         {"%c", print_c},
         {"%s", print_str},
         {"%d", print_int},

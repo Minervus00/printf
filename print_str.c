@@ -3,7 +3,7 @@
 /**
  * printstr - print string
  * @ap: va_list
- * Return: nb of character prrinted
+ * Return: nb of character printed
  */
 
 int print_str(va_list ap)

@@ -5,7 +5,7 @@ int _printf(const char *format, ...)
         int  (*structyp)(va_list);
         unsigned int pri_c = 0;
         va_list ap;
-        
+
         if (format == NULL)
                 return (-1);
         va_start(ap, format);
@@ -41,4 +41,3 @@ int _printf(const char *format, ...)
         va_end(ap);
         return(pri_c);
 }
-
