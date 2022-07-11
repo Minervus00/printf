@@ -8,13 +8,13 @@
 
 int _puts(char *string)
 {
-    int i = 0,count = 0;
+	int i = 0, count = 0;
 
-    while(string[i])
-    {
-        _putchar(string[i]);
-        i++;
-        count++;
-    }
-    return (count);
+	while (string[i])
+	{
+		_putchar(string[i]);
+		i++;
+		count++;
+	}
+	return (count);
 }
