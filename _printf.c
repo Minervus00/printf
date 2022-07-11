@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
         if (format == NULL)
                 return (-1);
         va_start(ap, format);
-        putchar(-1);
+        _putchar(-1);
         while (format[0])
         {
                 if (format[0] == '%')
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
                         format++;
                 }
         }
-       putchar(-2);
+        _putchar(-2);
         va_end(ap);
         return(pri_c);
 }
