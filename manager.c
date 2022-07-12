@@ -25,7 +25,7 @@ int (*manager(const char *format))(va_list)
 		{"%o", print_oct},
 		{"%u", print_dec},
 		{"%p", print_p},
-		/*{"%r", print_revstr},*/
+		{"%r", print_revstr},
 		{"%R", print_rot13},
 		{NULL, NULL}
 	};
