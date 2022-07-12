@@ -43,7 +43,7 @@ int print_hexl(unsigned long int num)
 
 int print_p(va_list ap)
 {
-	char *s = "(nil)";
+	char *s = "(null)";
 	int count, i;
 	void *m;
 	long int j;
