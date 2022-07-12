@@ -5,7 +5,6 @@
  * @format: string.
  * Description: the function loops through the structs
  * selector[] ment of the struct.
- * structype selector - struct
  * Return: a pointer
  */
 
@@ -13,7 +12,7 @@ int (*manager(const char *format))(va_list)
 {
 	int i;
 
-	structype selector[] = {
+	strum selector[] = {
 		{"%c", print_c},
 		{"%s", print_str},
 		{"%d", print_int},
