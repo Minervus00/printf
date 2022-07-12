@@ -16,8 +16,8 @@ int print_hexl(unsigned long int num)
 	ptr = &buffer[49];
 	*ptr = '\0';
 	do {
-		*--ptr = rep[num % base];
-		num /= base;
+		*--ptr = rep[num % 16];
+		num /= 16;
 	} while (num != 0);
 	for (i = 0; ptr[i]; i++)
 		_putchar(ptr[i]);
