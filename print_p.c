@@ -7,6 +7,7 @@
  */
 int print_hexl(unsigned long int num)
 {
+	int i;
 	static char *rep;
 	static char buffer[50];
 	char *ptr;
