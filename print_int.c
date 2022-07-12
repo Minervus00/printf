@@ -8,9 +8,10 @@
 
 int _abs(int nb)
 {
-    if (nb < 0)
-        return (-1 * nb);
-    return (nb);
+	if (nb < 0)
+		return (-1 * nb);
+	else
+		return (nb);
 }
 
 /**
@@ -21,17 +22,16 @@ int _abs(int nb)
 
 int count_digits(int nb)
 {
-    int count = 0, nb0 = nb;
+	int count = 0, nb0 = nb;
 
-    if (nb <= 0)
-        count += 1;
-
-    while (_abs(nb0) != 0)
-    {
-        nb0 = nb0 / 10;
-        count ++;
-    }
-    return (count);
+	if (nb <= 0)
+		count += 1;
+	while (_abs(nb0) != 0)
+	{
+		nb0 = nb0 / 10;
+		count++;
+	}
+	return (count);
 }
 
 /**
@@ -41,22 +41,21 @@ int count_digits(int nb)
  */
 int integer(int nb)
 {
-    unsigned int unint;
-    int count;
+	unsigned int unint;
+	int count;
 
-    count = count_digits(nb);
-    if (nb < 0)
-    {
-        _putchar('-');
-        unint = -nb;
-    }
-    else
-        unint = nb;
-
-    if (unint > 10)
-        integer(unint / 10);
-    _putchar(unint % 10 + '0');
-    return (count);
+	count = count_digits(nb);
+	if (nb < 0)
+	{
+		_putchar('-');
+		unint = -nb;
+	}
+	else
+		unint = nb;
+	if (unint >= 10)
+		integer(unint / 10);
+	_putchar(unint % 10 + '0');
+	return (count);
 }
 
 /**
@@ -67,8 +66,9 @@ int integer(int nb)
 
 int print_int(va_list ap)
 {
-    int nb = va_arg(ap, int);
-    int nb0;
-    nb0 = integer(nb);
-    return (nb0);
+	int nb = va_arg(ap, int);
+	int nb0;
+
+	nb0 = integer(nb);
+	return (nb0);
 }

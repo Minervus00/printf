@@ -5,8 +5,8 @@
  * @format: string.
  * Description: the function loops through the structs
  * selector[] ment of the struct.
+ * structype selector - struct
  * Return: a pointer
- * structype selector - Struct
  */
 
 int (*manager(const char *format))(va_list)

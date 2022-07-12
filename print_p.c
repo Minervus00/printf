@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_hexl - prints a long hexadecimal number.
+ * print_hexl - prints a long hexadecimal number.
  * @num: argument
  * Return: counter.
  */
@@ -43,24 +43,23 @@ int print_hexl(unsigned long int num)
 
 int print_p(va_list ap)
 {
-    char *s = "(nil)";
-    int count, i;
-    void *m;
-    long int j;
+	char *s = "(nil)";
+	int count, i;
+	void *m;
+	long int j;
 
-    m = va_arg(ap, void *);
-    if (m == NULL)
-    {
-        for (i = 0; s[i]; i++)
-        {
-            _putchar(s[i]);
-        }
-        return (i);
-    }
-
-    j = (unsigned long int)m;
-    _putchar('0');
-    _putchar('x');
-    count = print_hexl(j);
-    return (count + 2);
+	m = va_arg(ap, void *);
+	if (m == NULL)
+	{
+		for (i = 0; s[i]; i++)
+		{
+			_putchar(s[i]);
+		}
+		return (i);
+	}
+	j = (unsigned long int)m;
+	_putchar('0');
+	_putchar('x');
+	count = print_hexl(j);
+	return (count + 2);
 }
