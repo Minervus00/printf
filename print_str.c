@@ -13,6 +13,10 @@ int print_str(va_list ap)
 
 	if (string == NULL)
 		string = "(null)";
-	count = _puts(string);
+	while (string[0])
+	{
+		count++;
+		string++;
+	}
 	return (count);
 }
