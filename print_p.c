@@ -7,32 +7,20 @@
  */
 int print_hexl(unsigned long int num)
 {
-	long int i;
-	long int *array;
-	long int count = 0;
-	unsigned long int temp = num;
+	static char *rep;
+	static char buffer[50];
+	char *ptr;
 
-	while (num / 16 != 0)
-	{
-		num /= 16;
-		count++;
-	}
-	count++;
-	array = malloc(count * sizeof(long int));
-
-	for (i = 0; i < count; i++)
-	{
-		array[i] = temp % 16;
-		temp /= 16;
-	}
-	for (i = count - 1; i >= 0; i--)
-	{
-		if (array[i] > 9)
-			array[i] = array[i] + 39;
-		_putchar(array[i] + '0');
-	}
-	free(array);
-	return (count);
+	rep = "0123456789abcdef";
+	ptr = &buffer[49];
+	*ptr = '\0';
+	do {
+		*--ptr = rep[num % base];
+		num /= base;
+	} while (num != 0);
+	for (i = 0; ptr[i]; i++)
+		_putchar(ptr[i]);
+	return (i);
 }
 
 /**
@@ -43,7 +31,7 @@ int print_hexl(unsigned long int num)
 
 int print_p(va_list ap)
 {
-	char *s = "(null)";
+	char *s = "(nil)";
 	int count, i;
 	void *m;
 	long int j;
